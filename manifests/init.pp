@@ -45,7 +45,7 @@ class rancid (
     }
     'RedHat': {
       case $::operatingsystemmajrelease {
-        '6': {
+        '7': {
           $default_packages        = [ 'rancid' ]
           $default_rancid_config   = '/etc/rancid/rancid.conf'
           $default_user            = 'rancid'
@@ -56,7 +56,7 @@ class rancid (
           $default_rancid_path_env = '/usr/libexec/rancid:/bin:/usr/bin:/usr/local/bin'
         }
         default: {
-          fail("Rancid supports osfamily RedHat release 6. Detected operatingsystemmajrelease is <${::operatingsystemmajrelease}>.")
+          fail("Rancid supports osfamily RedHat release 7. Detected operatingsystemmajrelease is <${::operatingsystemmajrelease}>.")
         }
       }
     }
